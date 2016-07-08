@@ -1,0 +1,60 @@
+<ion-view>
+  <div class="bar bar-footer app-bottom-tab-bar">
+    <div class="app-bottom-tab-btn vertical-mid-container">
+      <div class="app-tab-btn vertical-mid-inner" ng-click="goCouponsList()">
+        <button class="button icon ion-ios-albums-outline"></button>
+        <p>Coupons</p>
+      </div>
+    </div>
+    <div class="app-bottom-tab-btn app-add-coupon-btn">
+      <button class="button icon ion-ios-plus" ng-click="goConnectList()"></button>
+    </div>
+    <div class="app-bottom-tab-btn vertical-mid-container">
+      <div class="app-tab-btn vertical-mid-inner app-tab-btn-active">
+        <button class="button icon ion-ios-gear-outline"></button>
+        <p>Settings</p>
+      </div>
+    </div>
+  </div>
+  <ion-content>
+    <div class="app-view-title">
+      {{userInfo.userName}}
+      <div class="app-profile-img">
+        <img ng-src="{{userInfo.profileImg}}" class="full-image">
+      </div>
+      <div class="app-profile-social-mark vertical-mid-container app-social-facebook-button" ng-show="userInfo.socialAuth=='facebook'">
+        <i class="icon ion-social-facebook vertical-mid-inner"></i>
+      </div>
+      <div class="app-profile-social-mark vertical-mid-container app-social-google-plus-button" ng-show="userInfo.socialAuth=='googleplus'">
+        <i class="icon ion-social-googleplus vertical-mid-inner"></i>
+      </div>
+      <div class="app-profile-social-mark vertical-mid-container app-social-twitter-button" ng-show="userInfo.socialAuth=='twitter'">
+        <i class="icon ion-social-twitter vertical-mid-inner"></i>
+      </div>
+    </div>
+    <div class="app-view-desc">
+      PROFILE SETTINGS
+    </div>
+    <div class="app-profile-setting-list">
+      <ion-list>
+        <ion-item class="item item-icon-right">
+          Timezone
+          <span>America/Toronto</span>
+          <i class="icon ion-ios-arrow-right app-channel-right-arrow"></i>
+        </ion-item>
+        <ion-item class="item item-icon-right">
+          Link Shortening
+          <i class="icon ion-ios-arrow-right app-channel-right-arrow"></i>
+        </ion-item>
+        <ion-item class="item item-icon-right">
+          Push Notifications
+          <i class="icon ion-ios-arrow-right app-channel-right-arrow"></i>
+        </ion-item>
+        <ion-item class="item item-icon-right">
+          Reconnect this Account
+          <i class="icon ion-ios-arrow-right app-channel-right-arrow"></i>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

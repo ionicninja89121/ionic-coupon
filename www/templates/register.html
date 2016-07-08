@@ -1,0 +1,26 @@
+<div class="auth-container">
+  <div class="input-group">
+    <div class="app-form-input app-from-input-top">
+      <input type="email" placeholder="Email">
+    </div>
+    <div class="app-form-input app-from-input-middle">
+      <input type="text" placeholder="First Name">
+    </div>
+    <div class="app-form-input app-from-input-middle">
+      <input type="text" placeholder="Last Name">
+    </div>
+    <div class="app-form-input app-from-input-middle">
+      <input type="password" placeholder="Password (7 characters or above)">
+    </div>
+    <div class="app-form-input app-from-input-bottom">
+      <input type="password" placeholder="Reenter Password">
+    </div>
+  </div>
+  <div class="auth-agree-terms">
+    <button class="button icon-left" ng-class="{'ion-android-checkbox-outline': agreed, 'ion-android-checkbox-outline-blank': !agreed}"
+      ng-click="agreed=!agreed">
+      &nbsp; I agree to terms and conditions
+    </button>
+  </div>
+  <button class="button app-button auth-submit-btn" ng-click="goMain()">Agree & Create Account</button>
+</div>

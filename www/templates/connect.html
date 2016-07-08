@@ -1,0 +1,42 @@
+<ion-header-bar class="bar-stable app-header-bar">
+  <button class="button button-clear">Close</button>
+  <h1 class="title">Connect</h1>
+  <button class="button button-clear">Help</button>
+</ion-header-bar>
+<ion-view>
+  <div class="bar bar-footer app-bottom-tab-bar">
+    <div class="app-bottom-tab-btn vertical-mid-container">
+      <div class="app-tab-btn vertical-mid-inner" ng-click="goCouponsList()">
+        <button class="button icon ion-ios-albums-outline"></button>
+        <p>Coupons</p>
+      </div>
+    </div>
+    <div class="app-bottom-tab-btn app-add-coupon-btn">
+      <button class="button icon ion-ios-plus" ng-click="goPostCoupon()"></button>
+    </div>
+    <div class="app-bottom-tab-btn vertical-mid-container">
+      <div class="app-tab-btn vertical-mid-inner" ng-click="goSettings()">
+        <button class="button icon ion-ios-gear-outline"></button>
+        <p>Settings</p>
+      </div>
+    </div>
+  </div>
+  <ion-content class="app-connect-view">
+    <div class="app-connect-desc text-center" ng-show="channelCount==0">
+      <p>You have 0 channels.</p>
+      <p>Add at lest one channel to start posting.</p>
+    </div>
+    <div class="app-social-channel-list">
+      <ion-list>
+        <ion-item class="item item-button-left item-icon-right" ng-repeat="channel in channelList" ng-click="{{channel.loginFunc}}">
+          <button class="button app-socail-channel-btn icon app-icon {{channel.icon}} {{channel.btnCss}}">
+          </button>
+          <h2>{{channel.name}}</h2>
+          <p>{{channel.desc}}</p>
+          <i class="icon ion-ios-arrow-right app-channel-right-arrow"></i>
+          <i class="icon ion-checkmark-circled app-channel-added" ng-show="channel.added==true"></i>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

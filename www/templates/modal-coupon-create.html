@@ -1,0 +1,37 @@
+<ion-modal-view>
+  <div class="bar bar-footer app-bottom-tab-bar app-coupon-form-bottom-bar">
+    <div class="app-bottom-left-btn">
+      <button class="button app-button app-cancel-post-coupon-btn" ng-click="closeCouponCreate()">Cancel</button>
+    </div>
+    <div class="app-bottom-right-btn">
+      <button class="button app-button app-post-coupon-btn" ng-click="postCoupon()">Post</button>
+    </div>
+  </div>
+  <ion-content>
+    <div class="post-new-coupon-container">
+      <div class="post-social-channels">
+        <div class="post-social-channel-item flow-left" ng-repeat="channel in channelList | orderBy:'added'"
+             ng-class="{'post-social-channel-invalid': (channel.added=='false')}">
+          <button class="button app-socail-channel-btn icon app-icon {{channel.icon}} {{channel.btnCss}}"></button>
+        </div>
+      </div>
+      <div class="clear-flow"></div>
+      <div class="coupon-post-form">
+        <div class="input-post-desc">
+          <textarea class="coupon-post-form-input-field" placeholder="Type your coupon description here"
+                    ng-model="newCoupon.desc" ng-keypress="onTypeCouponDesc()" ng-keyup="onTypeCouponDesc()"></textarea>
+          <span class="left-desc-chars">{{leftCouponDescChars}}</span>
+        </div>
+
+        <input type="text" class="coupon-post-form-input-field" placeholder="Retail Price" ui-money-mask="2">
+        <input type="text" class="coupon-post-form-input-field" placeholder="Discount Price">
+        <input type="datetime" class="coupon-post-form-input-field" placeholder="Date/Time">
+        <div class="coupon-add-attach" ng-click="pickupMedia()" ng-hide="isAttached">+ Add a Photo or Video</div>
+        <div class="attached-media" ng-show="isAttached">
+          <img src="img/attach.jpg" class="full-image">
+          <div class="button icon ion-close attach-close-btn" ng-click="removeAttachedMedia()"></div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

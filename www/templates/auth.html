@@ -1,0 +1,23 @@
+<ion-header-bar class="bar-stable app-header-bar">
+  <h1 class="title">Sign In</h1>
+</ion-header-bar>
+<ion-view>
+  <ion-content>
+    <div class="auth-btn-bar">
+      <div class="auth-tab-btn vertical-mid-container" ng-class="{'auth-btn-active': auth_tab_active[0]}" ng-click="onAuthTab(0)">
+        <div class="vertical-mid-inner">
+          <div class="auth-tab-btn-title">Sign In</div>
+        </div>
+      </div>
+      <div class="auth-tab-btn vertical-mid-container" ng-class="{'auth-btn-active': auth_tab_active[1]}" ng-click="onAuthTab(1)">
+        <div class="vertical-mid-inner">
+          <div class="auth-tab-btn-title">Register</div>
+        </div>
+      </div>
+    </div>
+    <div ng-show="auth_tab_active[0]" ng-include="'templates/signin.html'">
+    </div>
+    <div ng-show="auth_tab_active[1]" ng-include="'templates/register.html'">
+    </div>
+  </ion-content>
+</ion-view>

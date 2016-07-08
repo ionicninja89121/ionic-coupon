@@ -1,0 +1,38 @@
+<ion-view>
+  <div class="bar bar-footer app-bottom-tab-bar">
+    <div class="app-bottom-tab-btn vertical-mid-container">
+      <div class="app-tab-btn vertical-mid-inner app-tab-btn-active">
+        <button class="button icon ion-ios-albums-outline"></button>
+        <p>Coupons</p>
+      </div>
+    </div>
+    <div class="app-bottom-tab-btn app-add-coupon-btn">
+      <button class="button icon ion-ios-plus" ng-click="goConnectList()"></button>
+    </div>
+    <div class="app-bottom-tab-btn vertical-mid-container">
+      <div class="app-tab-btn vertical-mid-inner">
+        <button class="button icon ion-ios-gear-outline" ng-click="goSettings()"></button>
+        <p>Settings</p>
+      </div>
+    </div>
+  </div>
+  <ion-content>
+    <div class="app-view-title">
+      Coupons
+    </div>
+    <div class="app-view-desc">
+      COUPONS LIST
+    </div>
+    <div class="app-coupon-list">
+      <ion-list can-swipe="true">
+        <ion-item class="item" ng-repeat="coupon in couponList">
+          {{coupon.desc}}
+          <div>
+            <ion-option-button class="button-positive icon app-icon ion-app-edit app-coupon-edit-btn"></ion-option-button>
+            <ion-option-button class="button-assertive icon app-icon ion-app-delete app-coupon-del-btn"></ion-option-button>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

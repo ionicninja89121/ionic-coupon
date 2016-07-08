@@ -1,0 +1,38 @@
+<div class="auth-container">
+  <div class="input-group">
+    <div class="app-form-input app-from-input-top">
+      <input type="email" placeholder="User Name (Email)">
+    </div>
+    <div class="app-form-input app-from-input-bottom">
+      <input type="password" placeholder="Password">
+    </div>
+  </div>
+  <div class="auth-password-handle-part">
+    <div class="auth-password-show flow-left">
+      <i class="icon ion-ios-eye-outline"></i>
+      <span>Show Password</span>
+    </div>
+    <div class="auth-password-forgot flow-right">
+      <a>Forgot Password?</a>
+    </div>
+  </div>
+  <div class="clear-flow"></div>
+  <button class="button app-button auth-submit-btn" ng-click="goMain()">Sign In</button>
+  <div class="auth-social-login">
+    <div class="auth-social-login-desc text-center">
+      <div class="auth-social-login-desc-mid-line"></div>
+      <div class="auth-social-login-desc-txt text-center">Or Sign in with</div>
+    </div>
+    <div class="auth-social-login-btn-bar">
+      <div class="auth-social-btn">
+        <button class="button icon ion-social-facebook app-button app-social-facebook-button" ng-click="showFaceBookLogin(true)"></button>
+      </div>
+      <div class="auth-social-btn">
+        <button class="button icon ion-social-googleplus app-button app-social-google-plus-button" ng-click="showGooglePlusLogin(true)"></button>
+      </div>
+      <div class="auth-social-btn">
+        <button class="button icon ion-social-twitter app-button app-social-twitter-button" ng-click="showTwitterLogin(true)"></button>
+      </div>
+    </div>
+  </div>
+</div>
